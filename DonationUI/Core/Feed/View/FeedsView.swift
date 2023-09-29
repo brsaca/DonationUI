@@ -15,9 +15,16 @@ struct FeedsView: View {
         ZStack(alignment: .bottom) {
             ScrollView(.vertical, showsIndicators: false){
                 // MARK: Users
-                ScrollView(.horizontal) {
-                    
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack(spacing: 15) {
+                        ForEach(User.MOCK_USERS, id: \.id) { user in
+                            UserPhoto(user: user, presentation: .feed)
+                        }
+                    }
+                    .frame(height: 80)
                 }
+                .padding(.top, 40)
+                .padding(.leading, 40)
                 
                 // MARK: List Feed
             }
@@ -38,7 +45,7 @@ struct FeedsView: View {
                 RoundedRectangle(cornerRadius: 30).stroke(.black, lineWidth: 2)
             )
             .offset(x: 90, y: -100)
-
+            
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .padding(.top)
