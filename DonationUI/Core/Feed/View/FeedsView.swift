@@ -17,7 +17,14 @@ struct FeedsView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 15) {
                     ForEach(User.MOCK_USERS, id: \.id) { user in
-                        UserPhoto(user: user, presentation: .feed)
+                        NavigationLink(
+                            destination: UserView(user: user)
+                                .navigationBarTitle("")
+                                .navigationBarHidden(true)
+                                .navigationBarBackButtonHidden(true)
+                        ){
+                                UserPhoto(user: user, presentation: .feed)
+                            }
                     }
                 }
                 .frame(height: 85)

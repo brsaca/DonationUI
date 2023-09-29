@@ -47,12 +47,14 @@ struct FeedCell: View {
                 
                 Spacer()
             }
+            .padding(.horizontal)
             
             // MARK: Info
             if let caption = post.caption {
                 Text(caption)
                     .font(.footnote)
                     .fontWeight(.regular)
+                    .padding(.horizontal)
             }
             
             // MARK: Image
@@ -60,8 +62,7 @@ struct FeedCell: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: .infinity, height: 150)
-                    .padding(.bottom, 10)
+                    .frame(width: .infinity, height: 180)
                     .cornerRadius(3)
             }
             
@@ -73,6 +74,7 @@ struct FeedCell: View {
                 Spacer()
                 stats(icon: .more)
             }
+            .padding(.horizontal)
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 10)

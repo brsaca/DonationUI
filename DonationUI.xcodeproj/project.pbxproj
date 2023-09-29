@@ -18,6 +18,7 @@
 		4BA03D5A2AC603D4001850CA /* FeedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D592AC603D4001850CA /* FeedsView.swift */; };
 		4BA03D5E2AC657D1001850CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D5D2AC657D1001850CA /* User.swift */; };
 		4BA03D612AC65954001850CA /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D602AC65954001850CA /* UserPhoto.swift */; };
+		4BA3890C2AC7487300D5976B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3890B2AC7487200D5976B /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4BA03D592AC603D4001850CA /* FeedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsView.swift; sourceTree = "<group>"; };
 		4BA03D5D2AC657D1001850CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BA03D602AC65954001850CA /* UserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
+		4BA3890B2AC7487200D5976B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				4BA03D5F2AC65934001850CA /* Components */,
-				4BA03D532AC5FE37001850CA /* DonationDetail */,
 				4BA03D512AC5FE28001850CA /* Feed */,
 				4BA03D522AC5FE30001850CA /* Profile */,
 				4BA03D502AC5FE1E001850CA /* Root */,
+				4BA03D532AC5FE37001850CA /* User */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -126,11 +128,12 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		4BA03D532AC5FE37001850CA /* DonationDetail */ = {
+		4BA03D532AC5FE37001850CA /* User */ = {
 			isa = PBXGroup;
 			children = (
+				4BA3890B2AC7487200D5976B /* UserView.swift */,
 			);
-			path = DonationDetail;
+			path = User;
 			sourceTree = "<group>";
 		};
 		4BA03D542AC5FE4D001850CA /* Model */ = {
@@ -245,6 +248,7 @@
 				4BA03D5E2AC657D1001850CA /* User.swift in Sources */,
 				4BA03D572AC600D2001850CA /* Color.swift in Sources */,
 				4B4F8C112AC680B300DED580 /* Post.swift in Sources */,
+				4BA3890C2AC7487300D5976B /* UserView.swift in Sources */,
 				4BA03D612AC65954001850CA /* UserPhoto.swift in Sources */,
 				4B4F8C152AC684FE00DED580 /* FeedCell.swift in Sources */,
 			);

@@ -20,76 +20,78 @@ struct ContentView: View {
     @State var currentSection: AppSections = .feeds
     
     var body: some View {
-        VStack {
-            ZStack(alignment: .topTrailing) {
-                // MARK: SectionButtons
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack(spacing: 25) {
-                        SectionButton(.feeds)
-                        SectionButton(.messages)
-                        SectionButton(.profile)
-                        SectionButton(.empty)
+        NavigationView {
+            VStack {
+                ZStack(alignment: .topTrailing) {
+                    // MARK: SectionButtons
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 25) {
+                            SectionButton(.feeds)
+                            SectionButton(.messages)
+                            SectionButton(.profile)
+                            SectionButton(.empty)
+                        }
+                        .font(.title)
+                        .padding(.leading, 30)
+                        .padding(.top, 30)
+                        .padding(.bottom, 30)
                     }
-                    .font(.title)
-                    .padding(.leading, 30)
-                    .padding(.top, 30)
-                    .padding(.bottom, 30)
+                    
+                    // MARK: Bell Button
+                    ZStack {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "bell.fill")
+                                .resizable()
+                                .foregroundColor(Color.darkGray)
+                                .frame(width: 24, height: 24)
+                        }
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.white)
+                        .clipShape(Circle())
+                        
+                        Text(" ")
+                            .background(.green)
+                            .clipShape(Circle())
+                            .offset(x: 12, y: -10)
+                    }
+                    .frame(width: 50, height: 50)
+                    .padding(.trailing, 8)
+                    .offset(x:-5, y: 20)
                 }
                 
-                // MARK: Bell Button
-                ZStack {
-                    Button {
+                // MARK: Body
+                if currentSection == .feeds {
+                    ZStack(alignment: .bottom) {
+                        FeedsView()
                         
-                    } label: {
-                        Image(systemName: "bell.fill")
-                            .resizable()
-                            .foregroundColor(Color.darkGray)
-                            .frame(width: 24, height: 24)
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "plus")
+                                .resizable()
+                                .fontWeight(.light)
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 90, height: 90)
+                        .background(Color.darkButton)
+                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30).stroke(.black, lineWidth: 2)
+                        )
+                        .offset(x: 90, y: -90)
                     }
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(.white)
-                    .clipShape(Circle())
-                    
-                    Text(" ")
-                        .background(.green)
-                        .clipShape(Circle())
-                        .offset(x: 12, y: -10)
+                } else if currentSection == .profile {
+                    Text("Profile")
+                } else {
+                    Text("Under construction")
                 }
-                .frame(width: 50, height: 50)
-                .padding(.trailing, 8)
-                .offset(x:-5, y: 20)
             }
-            
-            // MARK: Body
-            if currentSection == .feeds {
-                ZStack(alignment: .bottom) {
-                    FeedsView()
-                    
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "plus")
-                            .resizable()
-                            .fontWeight(.light)
-                            .frame(width: 25, height: 25)
-                            .foregroundColor(.black)
-                    }
-                    .frame(width: 90, height: 90)
-                    .background(Color.darkButton)
-                    .clipShape(RoundedRectangle(cornerRadius: 30))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30).stroke(.black, lineWidth: 2)
-                    )
-                    .offset(x: 90, y: -90)
-                }
-            } else if currentSection == .profile {
-                Text("Profile")
-            } else {
-                Text("Under construction")
-            }
+            .background(Color.ligthGray)
         }
-        .background(Color.ligthGray)
     }
     
     // MARK: - SectionButton
