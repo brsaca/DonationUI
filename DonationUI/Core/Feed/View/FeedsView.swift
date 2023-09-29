@@ -20,7 +20,7 @@ struct FeedsView: View {
                         UserPhoto(user: user, presentation: .feed)
                     }
                 }
-                .frame(height: 80)
+                .frame(height: 85)
             }
             .padding(.top, 10)
             .padding(.leading, 40)
