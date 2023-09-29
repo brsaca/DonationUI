@@ -12,7 +12,38 @@ struct FeedsView: View {
     // MARK: View Properties
     
     var body: some View {
-        Text("Feed")
+        ZStack(alignment: .bottom) {
+            ScrollView(.vertical, showsIndicators: false){
+                // MARK: Users
+                ScrollView(.horizontal) {
+                    
+                }
+                
+                // MARK: List Feed
+            }
+            
+            Button {
+                
+            } label: {
+                Image(systemName: "plus")
+                    .resizable()
+                    .fontWeight(.light)
+                    .frame(width: 25, height: 25)
+                    .foregroundColor(.black)
+            }
+            .frame(width: 90, height: 90)
+            .background(Color.darkButton)
+            .clipShape(RoundedRectangle(cornerRadius: 30))
+            .overlay(
+                RoundedRectangle(cornerRadius: 30).stroke(.black, lineWidth: 2)
+            )
+            .offset(x: 90, y: -100)
+
+        }
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .padding(.top)
+        .edgesIgnoringSafeArea(.all)
+        .background(Color.ligthGray)
     }
 }
 

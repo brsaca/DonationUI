@@ -14,7 +14,7 @@ extension Color {
     static let purpleBorder = Color("purple")
     static let darkGray = Color("darkGray")
     static let ligthGray = Color("ligthGray")
-    static let gradientColor = LinearGradient(
+    static let gradientUserColor = LinearGradient(
         colors: [.darkButton, .purpleBorder],
         startPoint: .topLeading,
         endPoint: .bottomTrailing)
