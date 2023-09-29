@@ -24,12 +24,19 @@ struct FeedsView: View {
             }
             .padding(.top, 10)
             .padding(.leading, 40)
+            .padding(.bottom, 30)
             
             // MARK: List Feed
+            LazyVStack(spacing:20) {
+                ForEach(Post.MOCK_POSTS, id: \.id) { post in
+                    FeedCell(post: post)
+                }
+            }
+            .padding(.horizontal, 20)
         }
         
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 160)
-        .background(Color.ligthGray)
+        .background(.clear)
     }
 }
 
