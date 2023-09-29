@@ -12,44 +12,23 @@ struct FeedsView: View {
     // MARK: View Properties
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            ScrollView(.vertical, showsIndicators: false){
-                // MARK: Users
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 15) {
-                        ForEach(User.MOCK_USERS, id: \.id) { user in
-                            UserPhoto(user: user, presentation: .feed)
-                        }
+        ScrollView(.vertical, showsIndicators: false){
+            // MARK: Users
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: 15) {
+                    ForEach(User.MOCK_USERS, id: \.id) { user in
+                        UserPhoto(user: user, presentation: .feed)
                     }
-                    .frame(height: 80)
                 }
-                .padding(.top, 40)
-                .padding(.leading, 40)
-                
-                // MARK: List Feed
+                .frame(height: 80)
             }
+            .padding(.top, 10)
+            .padding(.leading, 40)
             
-            Button {
-                
-            } label: {
-                Image(systemName: "plus")
-                    .resizable()
-                    .fontWeight(.light)
-                    .frame(width: 25, height: 25)
-                    .foregroundColor(.black)
-            }
-            .frame(width: 90, height: 90)
-            .background(Color.darkButton)
-            .clipShape(RoundedRectangle(cornerRadius: 30))
-            .overlay(
-                RoundedRectangle(cornerRadius: 30).stroke(.black, lineWidth: 2)
-            )
-            .offset(x: 90, y: -100)
-            
+            // MARK: List Feed
         }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        .padding(.top)
-        .edgesIgnoringSafeArea(.all)
+        
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 160)
         .background(Color.ligthGray)
     }
 }

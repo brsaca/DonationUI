@@ -21,7 +21,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            
             ZStack(alignment: .topTrailing) {
                 // MARK: SectionButtons
                 ScrollView(.horizontal, showsIndicators: false){
@@ -62,18 +61,35 @@ struct ContentView: View {
                 .offset(x:-5, y: 20)
             }
             
-            
             // MARK: Body
-            ScrollView (.vertical) {
-                if currentSection == .feeds {
+            if currentSection == .feeds {
+                ZStack(alignment: .bottom) {
                     FeedsView()
-                } else if currentSection == .profile {
-                    Text("Profile")
-                } else {
-                    Text("Under construction")
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                            .resizable()
+                            .fontWeight(.light)
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(.black)
+                    }
+                    .frame(width: 90, height: 90)
+                    .background(Color.darkButton)
+                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30).stroke(.black, lineWidth: 2)
+                    )
+                    .offset(x: 90, y: -90)
                 }
+            } else if currentSection == .profile {
+                Text("Profile")
+            } else {
+                Text("Under construction")
             }
         }
+        .background(Color.ligthGray)
     }
     
     // MARK: - SectionButton
