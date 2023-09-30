@@ -23,7 +23,7 @@ enum ImageSize {
         switch self {
         case .small: return 35
         case .medium: return 50
-        case .large: return 100
+        case .large: return 80
         }
     }
 }

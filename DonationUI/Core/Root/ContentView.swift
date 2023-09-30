@@ -39,18 +39,7 @@ struct ContentView: View {
                     
                     // MARK: Bell Button
                     ZStack {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "bell.fill")
-                                .resizable()
-                                .foregroundColor(Color.darkGray)
-                                .frame(width: 24, height: 24)
-                        }
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(.white)
-                        .clipShape(Circle())
+                        CircularButton(image: "bell.fill")
                         
                         Text(" ")
                             .background(.green)

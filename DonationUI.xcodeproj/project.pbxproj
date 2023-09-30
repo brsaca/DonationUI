@@ -19,6 +19,10 @@
 		4BA03D5E2AC657D1001850CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D5D2AC657D1001850CA /* User.swift */; };
 		4BA03D612AC65954001850CA /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D602AC65954001850CA /* UserPhoto.swift */; };
 		4BA3890C2AC7487300D5976B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3890B2AC7487200D5976B /* UserView.swift */; };
+		4BA3890E2AC754AA00D5976B /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3890D2AC754AA00D5976B /* CircularButton.swift */; };
+		4BA389102AC766C600D5976B /* Earning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3890F2AC766C600D5976B /* Earning.swift */; };
+		4BA389122AC76AD600D5976B /* StatsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA389112AC76AD600D5976B /* StatsContainer.swift */; };
+		4BA389142AC7AD3600D5976B /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA389132AC7AD3600D5976B /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		4BA03D5D2AC657D1001850CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BA03D602AC65954001850CA /* UserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
 		4BA3890B2AC7487200D5976B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		4BA3890D2AC754AA00D5976B /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		4BA3890F2AC766C600D5976B /* Earning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earning.swift; sourceTree = "<group>"; };
+		4BA389112AC76AD600D5976B /* StatsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsContainer.swift; sourceTree = "<group>"; };
+		4BA389132AC7AD3600D5976B /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,7 @@
 			children = (
 				4B4F8C102AC680B300DED580 /* Post.swift */,
 				4BA03D5D2AC657D1001850CA /* User.swift */,
+				4BA3890F2AC766C600D5976B /* Earning.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +176,9 @@
 			isa = PBXGroup;
 			children = (
 				4BA03D602AC65954001850CA /* UserPhoto.swift */,
+				4BA3890D2AC754AA00D5976B /* CircularButton.swift */,
+				4BA389112AC76AD600D5976B /* StatsContainer.swift */,
+				4BA389132AC7AD3600D5976B /* CustomSegmentedControl.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -241,14 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA389102AC766C600D5976B /* Earning.swift in Sources */,
+				4BA389122AC76AD600D5976B /* StatsContainer.swift in Sources */,
 				4BA03D5A2AC603D4001850CA /* FeedsView.swift in Sources */,
 				4BA03D432AC5F719001850CA /* ContentView.swift in Sources */,
 				4BA03D412AC5F719001850CA /* DonationUIApp.swift in Sources */,
 				4B4F8C132AC6820900DED580 /* Date.swift in Sources */,
 				4BA03D5E2AC657D1001850CA /* User.swift in Sources */,
+				4BA389142AC7AD3600D5976B /* CustomSegmentedControl.swift in Sources */,
 				4BA03D572AC600D2001850CA /* Color.swift in Sources */,
 				4B4F8C112AC680B300DED580 /* Post.swift in Sources */,
 				4BA3890C2AC7487300D5976B /* UserView.swift in Sources */,
+				4BA3890E2AC754AA00D5976B /* CircularButton.swift in Sources */,
 				4BA03D612AC65954001850CA /* UserPhoto.swift in Sources */,
 				4B4F8C152AC684FE00DED580 /* FeedCell.swift in Sources */,
 			);
