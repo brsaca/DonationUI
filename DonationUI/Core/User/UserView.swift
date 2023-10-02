@@ -11,6 +11,8 @@ struct UserView: View {
     // MARK: View Properties
     let user: User
     
+    @State var amountTxt: String = "$0.00"
+    @State var amount: Double = 0
     @State var selectedSegment: Int = 0
     private let widthScreen: CGFloat = UIScreen.main.bounds.width
     private let heightScreen: CGFloat = UIScreen.main.bounds.height
@@ -22,7 +24,7 @@ struct UserView: View {
                 
                 UserDetails
                 
-                SupportSection
+                OverviewSection
             }
         }
         .ignoresSafeArea(.all)
@@ -31,7 +33,7 @@ struct UserView: View {
 
 //MARK: - Components
 extension UserView {
-    // MARK: Header
+    
     var Header: some View {
         ZStack() {
             // Header
@@ -74,8 +76,6 @@ extension UserView {
     
     }
     
-    
-    // MARK: User Details
     var UserDetails: some View {
         VStack(alignment: .leading, spacing: 20) {
             Group {
@@ -90,27 +90,13 @@ extension UserView {
                     
                     StatsContainer(stats: .members, value: "\(user.members)")
                     
-                    Button {
-                        
-                    } label: {
-                        Text("Follow")
-                            .font(.subheadline)
-                            .fontWeight(.bold)
-                            .foregroundColor(.black)
-                    }
-                    .frame(width: 100, height: 46)
-                    
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12).stroke(.black, lineWidth: 2)
-                    )
-                    
+                    CustomButton(title: "Follow", backgroundColor: Color.darkButton, hasBorder: true, action: (), iconImage: nil, buttonSize: .medium)
                 }
             }
             .padding(.horizontal, 30)
             
             Text(user.details)
+                .fixedSize(horizontal: false, vertical: true)
                 .font(.footnote)
                 .padding(.horizontal, 30)
                 .foregroundColor(Color.darkGray)
@@ -121,15 +107,16 @@ extension UserView {
         .background(.white)
     }
     
-    // MARK: Support Section
-    var SupportSection: some View {
-        VStack {
+    var OverviewSection: some View {
+        VStack(alignment:.leading) {
             CustomSegmentedControl(selectedSegment: $selectedSegment, segments: ["Overview", "Posts", "Membership"])
-                .padding(.top, 20)
                 .padding(.horizontal, 40)
-            Spacer()
+            
+            SupportContainer
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
         }
-        .frame(height: heightScreen - 500)
+        .padding(.vertical, 40)
         .background(Color.ligthGray)
         .clipShape(
             .rect(
@@ -139,6 +126,39 @@ extension UserView {
                 topTrailingRadius: 30
             )
         )
+    }
+    
+    var SupportContainer: some View {
+        VStack(alignment: .leading, spacing: 20){
+            Text("Support \(user.name)")
+                .font(.title3)
+                .fontWeight(.semibold)
+            
+            Text("Prepare your money")
+                .font(.subheadline)
+            
+            HStack {
+                CustomButton(title: "$1", backgroundColor: Color.lightButton, hasBorder: false, action: (), iconImage: nil, buttonSize: .small)
+                
+                CustomButton(title: "$10", backgroundColor: Color.lightButton, hasBorder: false, action: (), iconImage: nil, buttonSize: .small)
+                
+                CustomButton(title: "$15", backgroundColor: Color.lightButton, hasBorder: false, action: (), iconImage: nil, buttonSize: .small)
+                
+                TextField("$0.00", text: $amountTxt)
+                    .padding()
+                    .background(Color.ligthGray)
+                    .cornerRadius(12)
+            }
+            
+            Spacer()
+            
+            CustomButton(title: "Take my money", backgroundColor: Color.lightButton, hasBorder: false, action: (), iconImage: "moneyBtn", buttonSize: .large)
+
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 20)
+        .background(.white)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
