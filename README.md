@@ -3,7 +3,7 @@
 Design App on SwiftUI from Dribbble [Donation iOs App](https://dribbble.com/shots/22495286-Donation-iOs-App)
 <p align="center">
 <a href="#">
-<!-- <img src="images/.gif" align="center" width=50%> -->
+<img src="images/donationUI.gif" align="center" width=50%> 
 </a> 
 <br><br>
      Donation App design with SwiftUI
@@ -15,7 +15,7 @@ Design App on SwiftUI from Dribbble [Donation iOs App](https://dribbble.com/shot
     <img alt="swiftUI" src="https://img.shields.io/badge/SwiftUI-16.4-blue.svg" />
   </a>
   <a href="#">
-    <img alt="status" src="https://img.shields.io/badge/status-inprogress-yellow.svg" />
+    <img alt="status" src="https://img.shields.io/badge/status-done-green.svg" />
   </a>
   <br>
     <br>
@@ -26,9 +26,6 @@ Design App on SwiftUI from Dribbble [Donation iOs App](https://dribbble.com/shot
 
 ## 📝 Description
 Develop an app from a dribbble design in SwiftUI
-
-## 💻 TODO
-
 
 ## 👤 Author
 
