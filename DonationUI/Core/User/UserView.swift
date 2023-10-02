@@ -14,6 +14,7 @@ struct UserView: View {
     @State var amountTxt: String = "$0.00"
     @State var amount: Double = 0
     @State var selectedSegment: Int = 0
+    
     private let widthScreen: CGFloat = UIScreen.main.bounds.width
     private let heightScreen: CGFloat = UIScreen.main.bounds.height
     
@@ -45,11 +46,11 @@ extension UserView {
             
             // NavBar
             HStack {
-                CircularButton(image: "chevron.left")
+                CircularButton(image: "chevron.left", action: ())
                 
                 Spacer()
                 
-                CircularButton(image: "square.and.arrow.up")
+                CircularButton(image: "square.and.arrow.up", action: ())
             }
             .frame(width:widthScreen - 70, height: 80)
             .offset(y: -70)

@@ -10,10 +10,11 @@ import SwiftUI
 struct CircularButton: View {
     // MARK: View Properties
     let image: String
+    let action: ()
     
     var body: some View {
         Button {
-            
+            action
         } label: {
             Image(systemName: image)
                 .resizable()
@@ -29,5 +30,5 @@ struct CircularButton: View {
 }
 
 #Preview {
-    CircularButton(image: "chevron.left")
+    CircularButton(image: "chevron.left", action: ())
 }

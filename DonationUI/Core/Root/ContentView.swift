@@ -39,7 +39,7 @@ struct ContentView: View {
                     
                     // MARK: Bell Button
                     ZStack {
-                        CircularButton(image: "bell.fill")
+                        CircularButton(image: "bell.fill", action: ())
                         
                         Text(" ")
                             .background(.green)

@@ -9,8 +9,6 @@ import SwiftUI
 
 struct FeedsView: View {
     
-    // MARK: View Properties
-    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
             // MARK: Users

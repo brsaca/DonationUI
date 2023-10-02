@@ -67,7 +67,7 @@ struct FeedCell: View {
             }
             
             // MARK: Stats
-            HStack(spacing: 10) {
+            HStack(spacing: 6) {
                 stats(icon: .like, value: post.likes)
                 stats(icon: .comment, value: post.comments)
                 stats(icon: .share)
@@ -84,8 +84,6 @@ struct FeedCell: View {
     }
     
     // MARK: Stats
-  
-   
    @ViewBuilder
     func stats(icon: TypeIcon, value: Int = 0) -> some View {
         HStack {
