@@ -11,6 +11,7 @@
 		4B4F8C132AC6820900DED580 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F8C122AC6820900DED580 /* Date.swift */; };
 		4B4F8C152AC684FE00DED580 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F8C142AC684FE00DED580 /* FeedCell.swift */; };
 		4B50D6722ACB16DD002D8AFC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D6712ACB16DD002D8AFC /* CustomButton.swift */; };
+		4B50D6752ACB270D002D8AFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D6742ACB270D002D8AFC /* ProfileView.swift */; };
 		4BA03D412AC5F719001850CA /* DonationUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D402AC5F719001850CA /* DonationUIApp.swift */; };
 		4BA03D432AC5F719001850CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D422AC5F719001850CA /* ContentView.swift */; };
 		4BA03D452AC5F71C001850CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA03D442AC5F71C001850CA /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		4B4F8C122AC6820900DED580 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		4B4F8C142AC684FE00DED580 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		4B50D6712ACB16DD002D8AFC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4B50D6742ACB270D002D8AFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4BA03D3D2AC5F719001850CA /* DonationUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonationUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA03D402AC5F719001850CA /* DonationUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationUIApp.swift; sourceTree = "<group>"; };
 		4BA03D422AC5F719001850CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B50D6732ACB25DB002D8AFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B50D6742ACB270D002D8AFC /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4BA03D342AC5F719001850CA = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 		4BA03D522AC5FE30001850CA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4B50D6732ACB25DB002D8AFC /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 				4B4F8C132AC6820900DED580 /* Date.swift in Sources */,
 				4BA03D5E2AC657D1001850CA /* User.swift in Sources */,
 				4BA389142AC7AD3600D5976B /* CustomSegmentedControl.swift in Sources */,
+				4B50D6752ACB270D002D8AFC /* ProfileView.swift in Sources */,
 				4BA03D572AC600D2001850CA /* Color.swift in Sources */,
 				4B4F8C112AC680B300DED580 /* Post.swift in Sources */,
 				4BA3890C2AC7487300D5976B /* UserView.swift in Sources */,
