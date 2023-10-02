@@ -12,6 +12,11 @@
 		4B4F8C152AC684FE00DED580 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F8C142AC684FE00DED580 /* FeedCell.swift */; };
 		4B50D6722ACB16DD002D8AFC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D6712ACB16DD002D8AFC /* CustomButton.swift */; };
 		4B50D6752ACB270D002D8AFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D6742ACB270D002D8AFC /* ProfileView.swift */; };
+		4B50D6782ACB54F5002D8AFC /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D6772ACB54F5002D8AFC /* UserStats.swift */; };
+		4B50D67A2ACB55C1002D8AFC /* UserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D6792ACB55C1002D8AFC /* UserActivity.swift */; };
+		4B50D67C2ACB564F002D8AFC /* UserActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D67B2ACB564F002D8AFC /* UserActivityRow.swift */; };
+		4B50D67E2ACB567E002D8AFC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D67D2ACB567E002D8AFC /* Activity.swift */; };
+		4B50D6802ACB5B6A002D8AFC /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50D67F2ACB5B6A002D8AFC /* Follower.swift */; };
 		4BA03D412AC5F719001850CA /* DonationUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D402AC5F719001850CA /* DonationUIApp.swift */; };
 		4BA03D432AC5F719001850CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA03D422AC5F719001850CA /* ContentView.swift */; };
 		4BA03D452AC5F71C001850CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BA03D442AC5F71C001850CA /* Assets.xcassets */; };
@@ -33,6 +38,11 @@
 		4B4F8C142AC684FE00DED580 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		4B50D6712ACB16DD002D8AFC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4B50D6742ACB270D002D8AFC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4B50D6772ACB54F5002D8AFC /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
+		4B50D6792ACB55C1002D8AFC /* UserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivity.swift; sourceTree = "<group>"; };
+		4B50D67B2ACB564F002D8AFC /* UserActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityRow.swift; sourceTree = "<group>"; };
+		4B50D67D2ACB567E002D8AFC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		4B50D67F2ACB5B6A002D8AFC /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		4BA03D3D2AC5F719001850CA /* DonationUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonationUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA03D402AC5F719001850CA /* DonationUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationUIApp.swift; sourceTree = "<group>"; };
 		4BA03D422AC5F719001850CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +76,16 @@
 				4B50D6742ACB270D002D8AFC /* ProfileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4B50D6762ACB54C2002D8AFC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4B50D6772ACB54F5002D8AFC /* UserStats.swift */,
+				4B50D6792ACB55C1002D8AFC /* UserActivity.swift */,
+				4B50D67B2ACB564F002D8AFC /* UserActivityRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4BA03D342AC5F719001850CA = {
@@ -144,6 +164,7 @@
 		4BA03D522AC5FE30001850CA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4B50D6762ACB54C2002D8AFC /* Components */,
 				4B50D6732ACB25DB002D8AFC /* View */,
 			);
 			path = Profile;
@@ -163,6 +184,8 @@
 				4B4F8C102AC680B300DED580 /* Post.swift */,
 				4BA03D5D2AC657D1001850CA /* User.swift */,
 				4BA3890F2AC766C600D5976B /* Earning.swift */,
+				4B50D67D2ACB567E002D8AFC /* Activity.swift */,
+				4B50D67F2ACB5B6A002D8AFC /* Follower.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BA389102AC766C600D5976B /* Earning.swift in Sources */,
+				4B50D6802ACB5B6A002D8AFC /* Follower.swift in Sources */,
+				4B50D67A2ACB55C1002D8AFC /* UserActivity.swift in Sources */,
 				4BA389122AC76AD600D5976B /* StatsContainer.swift in Sources */,
 				4BA03D5A2AC603D4001850CA /* FeedsView.swift in Sources */,
 				4BA03D432AC5F719001850CA /* ContentView.swift in Sources */,
@@ -276,10 +301,13 @@
 				4BA03D5E2AC657D1001850CA /* User.swift in Sources */,
 				4BA389142AC7AD3600D5976B /* CustomSegmentedControl.swift in Sources */,
 				4B50D6752ACB270D002D8AFC /* ProfileView.swift in Sources */,
+				4B50D67E2ACB567E002D8AFC /* Activity.swift in Sources */,
 				4BA03D572AC600D2001850CA /* Color.swift in Sources */,
 				4B4F8C112AC680B300DED580 /* Post.swift in Sources */,
 				4BA3890C2AC7487300D5976B /* UserView.swift in Sources */,
+				4B50D6782ACB54F5002D8AFC /* UserStats.swift in Sources */,
 				4B50D6722ACB16DD002D8AFC /* CustomButton.swift in Sources */,
+				4B50D67C2ACB564F002D8AFC /* UserActivityRow.swift in Sources */,
 				4BA3890E2AC754AA00D5976B /* CircularButton.swift in Sources */,
 				4BA03D612AC65954001850CA /* UserPhoto.swift in Sources */,
 				4B4F8C152AC684FE00DED580 /* FeedCell.swift in Sources */,

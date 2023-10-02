@@ -15,15 +15,18 @@ struct ProfileView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading) {
                 // User Stats
-                userStats
+                UserStats(user: user)
                 
                 // Montly Earning
+                userEarnings
                 
                 // Recent Activity
-                Spacer()
+                UserActivity(user: user)
+                    .padding(.horizontal, 30)
+                    .padding(.vertical, 30)
             }
         }
-        .background(.yellow)
+        .background(.white)
         .frame(width: .infinity, height: .infinity)
         .clipShape(
             .rect(
@@ -37,82 +40,52 @@ struct ProfileView: View {
     }
 }
 
+// MARK: - Components
 extension ProfileView {
-    var userStats: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            userPhotoAndName
-            
-            userNumbers
-        }
-        .background(Color.profileBkg)
-        .clipShape(
-            RoundedRectangle(cornerRadius: 16)
-        )
-        .padding(.horizontal, 20)
-        .padding(.vertical, 20)
-    }
-    
-    var userPhotoAndName: some View {
-        HStack {
-            UserPhoto(user: user, presentation: .profile)
-            
-            VStack(alignment: .leading) {
-                Text(user.fullName)
+    var userEarnings: some View {
+        VStack(alignment: .leading, spacing: 30) {
+            HStack {
+                Text("Montly Earning")
                     .font(.title3)
                     .fontWeight(.semibold)
+                
+                Spacer()
                 
                 Button {
                     
                 } label: {
-                    HStack {
-                        Text("See my page")
-                            .font(.footnote)
-                        
-                        Image(systemName: "arrow.up.forward.app")
-                    }
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .accentColor(Color.darkGray)
-                    .background(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 4))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 4).stroke(Color.ligthGray, lineWidth: 2)
-                    )
+                    Text("See All Stadistics")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .accentColor(Color.darkButton)
                 }
             }
+            .padding(.top, 30)
+            .padding(.horizontal, 30)
             
-            Spacer()
-            
-            Button {
+            HStack {
+                StatsContainer(stats: .membership, value: "$\(user.earnings.membership)")
                 
-            } label: {
-                Image("toolsIcon")
-                    .resizable()
-                    .frame(width: 40, height: 40)
+                Spacer()
                 
+                StatsContainer(stats: .shop, value: "$\(user.earnings.shop)")
+                
+                Spacer()
+                
+                StatsContainer(stats: .donations, value: "$\(user.earnings.donation)")
             }
+            .padding(.horizontal, 30)
+            .padding(.bottom, 30)
         }
-        .padding()
-    }
-    
-    var userNumbers: some View {
-        HStack {
-            StatsContainer(stats: .followers, value: "\(user.followers)")
-            
-            Spacer()
-            
-            StatsContainer(stats: .supporters, value: "\(user.supporters)")
-            
-            Spacer()
-            
-            StatsContainer(stats: .members, value: "\(user.members)")
-        }
-        .padding(.horizontal, 30)
-        .padding(.bottom, 40)
+        .background(Color.ligthGray)
+        .clipShape(
+            RoundedRectangle(cornerRadius: 16)
+        )
+        .padding(.horizontal, 20)
     }
 }
 
-// MARK: Previews
+// MARK: - Previews
 #Preview {
     ProfileView(user: User.MOCK_USERS[0])
 }

@@ -74,7 +74,7 @@ struct ContentView: View {
                         .offset(x: 90, y: -90)
                     }
                 } else if currentSection == .profile {
-                    Text("Profile")
+                    ProfileView(user: User.MOCK_USERS[0])
                 } else {
                     Text("Under construction")
                 }
